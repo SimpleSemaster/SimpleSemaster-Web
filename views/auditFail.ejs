@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="google-signin-client_id" content="11686802778-1uhbpv4706p3an8anm8qs4dcah4v7t4n.apps.googleusercontent.com">
+<title>Simple-Semaster 教室資訊系統</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet"/>    
+<link href="/css/menu.css" rel="stylesheet"/>     
+<!------------------------->
+</head>
+   
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+ 
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">  
+        </div>        
+            
+        <!--~~~~~~~~~~~~~~~~~-->
+        <ul id="navigation">
+            <img src="/imgs/logo.png" class="logo">
+
+            <li><a href="/">首頁</a></li>
+        
+            <li class="sub">         
+                <a href="#">使用者</a>          
+                <ul>    
+                    <li><a href="/auth/google">登入</a></li>
+                    <li><a href="/user/logout">登出</a></li>
+                </ul>
+            </li>
+            
+            <li class="sub">         
+                <a href="#">人員</a>          
+                <ul>          
+                    <li><a href="/user/add/form">新增</a></li>
+                    <li><a href="/user/remove/form">刪除</a></li>
+                    <li><a href="/user/update/no">變更</a></li>    
+                    <li><a href="/user/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">教室</a>          
+                <ul>          
+                    <li><a href="/room/add/form">新增</a></li>
+                    <li><a href="/room/remove/form">刪除</a></li>
+                    <li><a href="/room/update/no">變更</a></li>    
+                    <li><a href="/room/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">設備</a>          
+                <ul>          
+                    <li><a href="/device/add/form">新增</a></li>
+                    <li><a href="/device/remove/form">刪除</a></li>
+                    <li><a href="/device/update/no">變更</a></li>    
+                    <li><a href="/device/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">教室借用</a>          
+                <ul>          
+                    <li><a href="/bookingroom/form">借用申請</a></li><!-- -->  
+                    <li><a href="/roomverify/update/form">審核</a></li>   
+                    <li><a href="/roomverify/query">借用紀錄</a></li>   
+                    <li><a href="/roomdate/query/form"> 查詢教室借用狀況</a></li> 
+                </ul>
+            </li>
+            
+
+            <li class="sub">         
+                <a href="#">設備借用</a>          
+                <ul>          
+                    <li><a href="/bookingdevice/form">借用申請</a></li><!-- -->  
+                    <li><a href="/deviceverify/update/no">審核</a></li> 
+                    <li><a href="/devicereturn/update/no">歸還</a></li> 
+                    <li><a href="/deviceverify/query">借用紀錄</a></li>
+                </ul>
+            </li>
+            <li class="sub">         
+                <a href="#">懲罰</a>          
+                <ul>          
+                    <li><a href="/punish/add/form">新增</a></li>
+                    <li><a href="/punish/remove/form">刪除</a></li>
+                    <li><a href="/punish/update/no">變更</a></li>    
+                    <li><a href="/punish/query">查詢</a></li>      
+                </ul>
+            </li>
+
+        </ul>  
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <script>
+            alert("送交申請失敗");
+            location.href = "/";
+        </script>   
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            <h2>NTUB-IMD 109507</h2>
+        </div>  
+    </div>
+    <!--**************************-->    
+</body>
+   
+</html>

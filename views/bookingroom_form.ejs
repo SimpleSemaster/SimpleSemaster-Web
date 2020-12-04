@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="google-signin-client_id" content="11686802778-1uhbpv4706p3an8anm8qs4dcah4v7t4n.apps.googleusercontent.com">
+<title>Simple-Semaster 教室資訊系統</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet"/>    
+<link href="/css/menu.css" rel="stylesheet"/>     
+<!------------------------->
+</head>
+   
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+ 
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">  
+        </div>        
+            
+        <!--~~~~~~~~~~~~~~~~~-->
+        <ul id="navigation">
+            <img src="/imgs/logo.png" class="logo">
+
+            <li><a href="/">首頁</a></li>
+        
+            <li class="sub">         
+                <a href="#">使用者</a>          
+                <ul>    
+                    <li><a href="/auth/google">登入</a></li>
+                    <li><a href="/user/logout">登出</a></li>
+                </ul>
+            </li>
+            
+            <li class="sub">         
+                <a href="#">人員</a>          
+                <ul>          
+                    <li><a href="/user/add/form">新增</a></li>
+                    <li><a href="/user/remove/form">刪除</a></li>
+                    <li><a href="/user/update/no">變更</a></li>    
+                    <li><a href="/user/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">教室</a>          
+                <ul>          
+                    <li><a href="/room/add/form">新增</a></li>
+                    <li><a href="/room/remove/form">刪除</a></li>
+                    <li><a href="/room/update/no">變更</a></li>    
+                    <li><a href="/room/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">設備</a>          
+                <ul>          
+                    <li><a href="/device/add/form">新增</a></li>
+                    <li><a href="/device/remove/form">刪除</a></li>
+                    <li><a href="/device/update/no">變更</a></li>    
+                    <li><a href="/device/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">教室借用</a>          
+                <ul>          
+                    <li><a href="/bookingroom/form">借用申請</a></li><!-- -->  
+                    <li><a href="/roomverify/update/form">審核</a></li>   
+                    <li><a href="/roomverify/query">借用紀錄</a></li>   
+                    <li><a href="/roomdate/query/form"> 查詢教室借用狀況</a></li> 
+                </ul>
+            </li>
+            
+
+            <li class="sub">         
+                <a href="#">設備借用</a>          
+                <ul>          
+                    <li><a href="/bookingdevice/form">借用申請</a></li><!-- -->  
+                    <li><a href="/deviceverify/update/no">審核</a></li> 
+                    <li><a href="/devicereturn/update/no">歸還</a></li> 
+                    <li><a href="/deviceverify/query">借用紀錄</a></li>
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">懲罰</a>          
+                <ul>          
+                    <li><a href="/punish/add/form">新增</a></li>
+                    <li><a href="/punish/remove/form">刪除</a></li>
+                    <li><a href="/punish/update/no">變更</a></li>    
+                    <li><a href="/punish/query">查詢</a></li>      
+                </ul>
+            </li>
+
+        </ul>  
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="content">
+        <h2>教室借用</h2>
+            <form  method = "post" enctype="multipart/form-data" action = "/bookingroom">
+                <div class="form">
+                    <span class="name">編號: </span>
+                    <span class="value"><input type="text" name="userno" required></span>
+                    <span>請填寫學校信箱帳號(不包含「@ntub.edu.tw」)</span>
+                    <br/>
+                            
+                    <span class="name">教室: </span>
+                    <span class="value">
+                        <select name="roomno">
+                            <option value="401">資401</option>
+                            <option value="402">資402</option>
+                            <option value="403">藝403</option>
+                            <option value="404">藝404</option>
+                            <option value="405">藝405</option>
+                            <option value="406">藝406</option>
+                            <option value="407">藝407</option>
+                            <option value="408">藝408</option>
+                            <option value="409">藝409</option>
+                            <option value="410">藝410</option>
+                            <option value="研討室1">大研討</option>
+                            <option value="研討室2">小研討</option>
+                        </select>
+                    </span>    
+                    <br/>
+
+                    <span class="name">身分: </span>
+                    <span class="value">
+                        <select name="role" required>
+                            <option value="1系上人員">系上人員</option>
+                            <option value="2TA">TA</option>
+                            <option value="3資管科/系學會">資管科/系學會</option>
+                            <option value="4專題">專題</option>
+                            <option value="5一般學生">一般學生</option>
+                        </select>
+                    </span>    
+                    <br/>
+                            
+                    <span class="name">借用原因: </span>
+                    <span class="value" ><input type="text" name="reason" required>(專題組請填寫組別)</span>
+                    <br/>
+
+                    <span class="name">借用日: </span>
+                    <span class="value"><input type="date" name="borrowdate" required></span>
+                    <br/>
+
+                    <span class="name">借用時間: </span>
+                    <span class="value"><input type="time" name="borrowtime"required></span>
+                    <br/>
+
+                    <span class="name">歸還時間: </span>
+                    <span class="value"><input type="time" name="endtime" required></span>
+                    <br/>
+                            
+                    <span class="name">上傳圖片: </span>
+                    <span class="value"><input name="evidence" type="file" accept="image/gif, image/jpeg, image/png"></span>
+                    <br/>
+
+                    <span class="name"></span>
+                    <span class="value"><input type="submit" value="借用" ></span>    
+                </div>    
+            </form>            
+        </div>       
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            <h2>NTUB-IMD 109507</h2>
+        </div>   
+    </div>
+    <!--**************************-->    
+</body>
+   
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="google-signin-client_id" content="11686802778-1uhbpv4706p3an8anm8qs4dcah4v7t4n.apps.googleusercontent.com">
+<title>Simple-Semaster 教室資訊系統</title>
+<!-- 連結思源中文及css -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet"/>    
+<link href="/css/menu.css" rel="stylesheet"/>     
+<!------------------------->
+</head>
+   
+<body>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+ 
+    <!--**************************-->
+    <div class="container">    
+        <!--~~~~~~~~~~~~~~~~~-->
+        <div class="header">  
+        </div>        
+            
+        <!--~~~~~~~~~~~~~~~~~-->
+        <ul id="navigation">
+            <img src="/imgs/logo.png" class="logo">
+
+            <li><a href="/">首頁</a></li>
+        
+            <li class="sub">         
+                <a href="#">使用者</a>          
+                <ul>    
+                    <li><a href="/auth/google">登入</a></li>
+                    <li><a href="/user/logout">登出</a></li>
+                </ul>
+            </li>
+            
+            <li class="sub">         
+                <a href="#">人員</a>          
+                <ul>          
+                    <li><a href="/user/add/form">新增</a></li>
+                    <li><a href="/user/remove/form">刪除</a></li>
+                    <li><a href="/user/update/no">變更</a></li>    
+                    <li><a href="/user/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">教室</a>          
+                <ul>          
+                    <li><a href="/room/add/form">新增</a></li>
+                    <li><a href="/room/remove/form">刪除</a></li>
+                    <li><a href="/room/update/no">變更</a></li>    
+                    <li><a href="/room/query/form">查詢</a></li>     
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">設備</a>          
+                <ul>          
+                    <li><a href="/device/add/form">新增</a></li>
+                    <li><a href="/device/remove/form">刪除</a></li>
+                    <li><a href="/device/update/no">變更</a></li>    
+                    <li><a href="/device/query/form">查詢</a></li>      
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">教室借用</a>          
+                <ul>          
+                    <li><a href="/bookingroom/form">借用申請</a></li><!-- -->  
+                    <li><a href="/roomverify/update/form">審核</a></li>   
+                    <li><a href="/roomverify/query">借用紀錄</a></li>   
+                    <li><a href="/roomdate/query/form"> 查詢教室借用狀況</a></li> 
+                </ul>
+            </li>
+            
+
+            <li class="sub">         
+                <a href="#">設備借用</a>          
+                <ul>          
+                    <li><a href="/bookingdevice/form">借用申請</a></li><!-- -->  
+                    <li><a href="/deviceverify/update/no">審核</a></li> 
+                    <li><a href="/devicereturn/update/no">歸還</a></li> 
+                    <li><a href="/deviceverify/query">借用紀錄</a></li>
+                </ul>
+            </li>
+
+            <li class="sub">         
+                <a href="#">懲罰</a>          
+                <ul>          
+                    <li><a href="/punish/add/form">新增</a></li>
+                    <li><a href="/punish/remove/form">刪除</a></li>
+                    <li><a href="/punish/update/no">變更</a></li>    
+                    <li><a href="/punish/query">查詢</a></li>      
+                </ul>
+            </li>
+
+        </ul>  
+
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="content">
+            <h1>使用規則</h1> 
+            <ol type="1">
+                <li>本系專業教室及其設備以提供教學、研究等活動優先；另有空堂時段始可供校內外團體或個人借用，以增進專業教室之使用效益。                </li>
+                <li>借用單位未借用之器材設備，除經本系同意，不得擅自使用。</li>
+                <li>本系所管理之各專業教室位於教學及綜合行政區內，使用時請保持寧靜，以免影響其他單位運作。</li>
+                <li>專業教室內及週遭環境未經許可不得張貼海報；經許可張貼之海報嚴禁使用雙面膠或強力膠等不易清除之黏著劑，並應於使用後回復原狀。</li>
+                <li>借用者應負責維護場地之整潔及安全，歸還前需將場地復原。</li>
+                <li>場地內器材、設備等未經許可不得擅自搬動或架設，如因使用需要必須變動時，應先徵得本系管理人員之同意，若有損壞，應照價賠償或負責修復。</li>
+                <li>借用期間如有下列情形發生，本系得立即停止借用：</li>
+                <ol type="I">
+                    <li>違背法律、善良風俗或干擾公共秩序者。</li>
+                    <li>使用內容與申請事項不符者。</li>
+                    <li>場地設備擅自轉讓他人使用或變相提供他人使用。</li>
+                    <li>活動有嚴重損及場地設備安全或完整之虞者。</li>
+                    <li>有其他與場地使用原則不容之事實者。</li>
+                </ol>
+                <li>電腦教室內之各項機器設備及軟體皆為公有財產，嚴禁破壞、偷竊或擅自更改現有系統。</li>
+                <li>未經本系電腦教室管理人員之許可，不得任意搬動電腦設備、擅自連接網路或印表機連線等。</li>
+                <li>本系電腦教室使用之軟體皆為合法版本，嚴禁非法複製；亦不得將其他非法軟體轉錄至電腦中使用。</li>
+                <li>不得使用本系電腦教室之設備玩電動遊戲或大量列印私人資料。</li>
+                <li>不得攜帶食物、飲料進入電腦教室。</li>
+                <li>違反本要點之規定經查屬實者，得取消其在本系電腦教室使用權；情節重大者，依本校校規懲處或依相關法律規定報請司法單位處理。</li>
+            </ol>
+               
+        </div>       
+        
+        <!--~~~~~~~~~~~~~~~~~--> 
+        <div class="footer">
+            <h2>NTUB-IMD 109507</h2>
+        </div>  
+    </div>
+    <!--**************************-->    
+    
+</body>
+
+</html>
